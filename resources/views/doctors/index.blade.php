@@ -1,0 +1,71 @@
+@extends('layouts.panel')
+@section('title', 'Medicos')
+@section('content')
+<div class="card shadow">
+  <div class="card-header border-0">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="mb-0">Medicos</h3>
+      </div>
+      <div class="col text-right">
+        <a href="{{ url('doctors/create') }}" class="btn btn-sm btn-primary">Nueva Medico</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+  @if (session('notificacion'))
+    <div class="alert alert-success" role="alert">
+        {{session('notificacion') }}
+    </div>
+  @endif
+  </div>
+  <div class="table-responsive">
+    <!-- Projects table -->
+    <table class="table align-items-center table-flush">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Nombre del Doctor</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">DNI</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($doctors as $doctor)
+        <tr> 
+          <th scope="row">
+           {{$doctor->name}}
+          </th>
+          <td>
+          {{$doctor->email}}
+          </td>
+          <td>
+          {{$doctor->dni}}
+          </td>
+          <td>
+          
+          <form action="{{ url('doctors/'.$doctor->id) }}" method="post">
+            @method('DELETE')
+            @csrf
+            <a href="{{ url('doctors/'.$doctor->id.'/edit') }}" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="Editar" title="Editar">
+            Editar
+            </a>
+            <button type="submit" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="Remover" title="Remover">
+              Eliminar
+            </button>
+            <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="Perfil" title="Perfil">
+              <i class="ni ni-circle-08 pt-1"></i>
+            </button>
+          </form>
+          
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+    <div class="card-body">
+        {{ $doctors->links()}}
+    </div>
+  </div>
+</div>
+@endsection
