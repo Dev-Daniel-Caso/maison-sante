@@ -63,6 +63,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        # role by default patient
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
