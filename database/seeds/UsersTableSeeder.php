@@ -12,28 +12,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Jesus Quispe',
-            'email' => 'jesus_quispe@fadel.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('123'),
-            'remember_token' => Str::random(10),
-            'dni' =>  '76165238',
-            'address' => 'Mi Casa',
-            'phone' => '',
-            'role' => 'admin'
-        ]);
-        User::create([
-            'name' => 'Jesus Cruz',
-            'email' => 'jesus_cruz@fadel.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('123'),
-            'remember_token' => Str::random(10),
-            'dni' =>  '76165238',
-            'address' => 'Mi Casa',
-            'phone' => '',
-            'role' => 'admin'
-        ]);
-        User::create([
             'name' => 'Daniel Caso Quintanilla',
             'email' => 'admin@fadel.com',
             'email_verified_at' => now(),

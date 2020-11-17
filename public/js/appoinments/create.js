@@ -7,7 +7,7 @@ const noHoursAlert =
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-</div>`
+</div>`;
 
 $(function() {
     $specialty = $('#specialty');
@@ -18,7 +18,7 @@ $(function() {
 
     $specialty.change(() => {
         const specialtyId = $specialty.val();
-        const url = `/specialties/${specialtyId}/doctors`;
+        const url = `/api/specialties/${specialtyId}/doctors`;
         $.getJSON(url, onDoctorsLoaded);
     });
     $doctor.change(loadHours);
@@ -37,33 +37,34 @@ function onDoctorsLoaded(doctors) {
 function loadHours() {
     const selectedDate = $date.val();
     const doctorId = $doctor.val();
-    const url = `/schedule/hours?date=${selectedDate}&doctor_id=${doctorId}`;
+    const url = `/api/schedule/hours?date=${selectedDate}&doctor_id=${doctorId}`;
     $.getJSON(url, displayHours);
 }
 
 function displayHours(data) {
-    if (!data.morning && !data.afternoon) {
-        $hours.html(noHoursAlert)
-            // $($hours).fadeTo(2000, 500).slideUp(500, function(){
-            //     $($hours).slideUp(500);
-            // });
-        return;
-    }
-    let htmlHours = '';
-    iRadio = 0;
-    if (data.morning) {
-        const morning_intervals = data.morning;
-        morning_intervals.forEach(interval => {
-            htmlHours += getRadioIntervalHtml(interval);
-        });
-    }
-    if (data.afternoon) {
-        const afternoon_intervals = data.afternoon;
-        afternoon_intervals.forEach(interval => {
-            htmlHours += getRadioIntervalHtml(interval);
-        });
-    }
-    $hours.html(htmlHours);
+	if (!data.morning && !data.afternoon || 
+		data.morning.length===0 && data.afternoon.length===0) {
+
+		$hours.html(noHoursAlert);
+		return;
+	}
+
+	let htmlHours = '';
+	iRadio = 0;
+
+	if (data.morning) {
+		const morning_intervals = data.morning;
+		morning_intervals.forEach(interval => {
+			htmlHours += getRadioIntervalHtml(interval);
+		});
+	}
+	if (data.afternoon) {
+		const afternoon_intervals = data.afternoon;
+		afternoon_intervals.forEach(interval => {
+			htmlHours += getRadioIntervalHtml(interval);
+		});
+	}
+	$hours.html(htmlHours);
 }
 
 function getRadioIntervalHtml(interval) {
