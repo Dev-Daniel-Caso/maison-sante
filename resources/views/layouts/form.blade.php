@@ -23,7 +23,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-        <a class="navbar-brand" href="http://ariwonto.com/index/">
+        <a class="navbar-brand" href="https://www.maisondesante.org.pe/">
         <h2 class="text-white">{{config('app.name')}}</h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,13 +79,15 @@
     <!-- Header -->
     <div class="header bg-gradient-primary py-7 py-lg-8">
       <div class="container">
-        <div class="header-body text-center mb-7">
+        <div class="header-body text-center mb-5">
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6">
               <h1 class="text-white">
                   @yield('title', 'Bienvenido!')
               </h1>
-              <p class="text-lead text-light">Use these awesome forms to login or create new account in your project for free.</p>
+              <p class="text-lead text-white mb-0">Clínicas  Maison de Santé.</p>
+              <p class="text-lead text-white mb-1">Con los equipos para atenderte.</p>
+              <p class="text-lead text-white"> <a href="https://www.maisondesante.org.pe/?page_id=1771" class="btn btn-primary mt-4">Informacion</a></p>
             </div>
           </div>
         </div>
@@ -105,22 +107,19 @@
       <div class="row align-items-center justify-content-xl-between">
         <div class="col-xl-6">
           <div class="copyright text-center text-xl-left text-muted">
-            &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">{{config('app.name')}}</a>
+            &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">{{config('app.name')}}</a>
           </div>
         </div>
         <div class="col-xl-6">
           <ul class="nav nav-footer justify-content-center justify-content-xl-end">
             <li class="nav-item">
-              <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+              <a href="https://www.maisondesante.org.pe/?page_id=1106" class="nav-link" target="_blank">Quienes Somos</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+              <a href="https://www.maisondesante.org.pe/?page_id=1241" class="nav-link" target="_blank">Contactenos</a>
             </li>
             <li class="nav-item">
-              <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+              <a href="https://www.maisondesante.org.pe/?page_id=987" class="nav-link" target="_blank">Preguntas Frecuentes</a>
             </li>
           </ul>
         </div>
