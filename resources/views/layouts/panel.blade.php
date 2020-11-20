@@ -28,8 +28,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="./index.html">
-        <img src="{{asset('img/Logos/Logotipo-Ariwonto-38.png')}}" height="300" class="navbar-brand-img" alt="...">
+      <a class="navbar-brand pt-1" href="./index.html">
+        <img src="{{asset('img/Logos/maison-sante.jpeg')}}" height="380" width="150" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       @include('includes.panel.sidebar')
@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="./index.html">
-                <img src="{{asset('img/brand/blue.png')}}">
+                <img src="{{asset('img/logos/profile.png')}}">
               </a>
             </div>
             <div class="col-6 collapse-close">
