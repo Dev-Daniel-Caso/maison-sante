@@ -27,8 +27,8 @@ class AppointmentController extends Controller
 				"description",
 				"specialty_id",
 				"doctor_id",
-				"scheduled_date",
-				"scheduled_time",
+				"schedule_date",
+				"schedule_time",
 				"type",
 				"created_at",
 				"status"

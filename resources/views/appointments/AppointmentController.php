@@ -78,7 +78,7 @@ class AppointmentController extends Controller
             $doctors = collect();
         }
         
-        $date = old('scheduled_date');
+        $date = old('schedule_date');
         $doctorId = old('doctor_id');
         if ($date && $doctorId) {
             $intervals = $scheduleService->getAvailableIntervals($date, $doctorId);
