@@ -29,7 +29,7 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-1" href="./index.html">
-        <img src="{{asset('img/Logos/maison-sante.jpeg')}}" height="380" width="150" class="navbar-brand-img" alt="...">
+        <img src="{{asset('img/Logos/maison-sante.png')}}" height="480" width="150" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       @include('includes.panel.sidebar')
