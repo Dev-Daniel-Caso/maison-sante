@@ -15,6 +15,8 @@ use App\User;
 
 class AuthController extends Controller
 {
+	use ValidateAndCreatePatient;
+	
     public function login(Request $request){
 
         $credentials = $request->only('email', 'password');
