@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da069104-dad9-4e79-a103-9c52fcea67d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/maison-sante.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maison-sante.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendNotifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/SendNotifications.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +116,10 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/kawankoding/laravel-fcm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kaRoRAAzCTzsxrcrSM2ER1Bwzj" />
@@ -146,6 +153,8 @@
       <workItem from="1606118817547" duration="14000" />
       <workItem from="1606151062744" duration="15000" />
       <workItem from="1606186757427" duration="79000" />
+      <workItem from="1606257024042" duration="600000" />
+      <workItem from="1606609210439" duration="4000" />
     </task>
     <servers />
   </component>

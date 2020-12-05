@@ -26,8 +26,6 @@ class SendNotifications extends Command
     public function handle()
     {
         $this->info('Buscando citas médicas:');
-        // hora actual
-        // 2018-12-01 15:03:18
         $now = Carbon::now();
 
 
