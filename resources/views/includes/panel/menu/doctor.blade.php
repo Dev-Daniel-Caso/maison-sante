@@ -12,4 +12,22 @@
   <a class="nav-link" href="/patients">
     <i class="ni ni-satisfied text-info"></i> Mis pacientes
   </a>
+<<<<<<< HEAD
+=======
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba 2
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba
+  </a>
+>>>>>>> 1422bd195d77d3bea5a2d59f50263637899c0759
 </li>
