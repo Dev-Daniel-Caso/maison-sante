@@ -17,11 +17,9 @@ class AuthController extends Controller
 {
 	use ValidateAndCreatePatient;
 	
-    public function login(Request $request){
-
-        $credentials = $request->only('email', 'password');
-
-        # return 'privado';
+    public function login(Request $request)
+    {
+    	$credentials = $request->only('email', 'password');
 
     	if (Auth::guard('api')->attempt($credentials)) {
 		    $user = Auth::guard('api')->user();
@@ -32,9 +30,9 @@ class AuthController extends Controller
 		    return compact('success', 'user', 'jwt');
 		} else {
 		    // Return response for failed attempt.
-			$error = true;
+			$success = false;
 			$message = 'Invalid credentials';
-			return compact('error', 'message');
+			return compact('success', 'message');
 		}
     }
 

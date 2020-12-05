@@ -21,11 +21,6 @@ class User extends Authenticatable
         'email_verified_at', 'created_at', 'updated_at'
     ];
 
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
     public static $rules = [
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
@@ -42,18 +37,22 @@ class User extends Authenticatable
         ]);
     }
 
-    public function specialties(){
+    // $user->specialties
+    public function specialties()
+    {
         return $this->belongsToMany(Specialty::class)->withTimestamps();
-    } 
-
-    public function scopePatients($query){
-        return $query->where('role' , 'patient');
     }
 
-    public function scopeDoctors($query){
-        return $query->where('role' , 'doctor');
+    public function scopePatients($query)
+    {
+        return $query->where('role', 'patient');
     }
-    
+
+    public function scopeDoctors($query)
+    {
+        return $query->where('role', 'doctor');
+    }
+
     // $user->asPatientAppointments  ->requestedAppointments
     // $user->asDoctorAppointments   ->attendedAppointments
     public function asDoctorAppointments()

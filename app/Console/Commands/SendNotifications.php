@@ -26,8 +26,12 @@ class SendNotifications extends Command
     public function handle()
     {
         $this->info('Buscando citas médicas:');
+        // hora actual
+        // 2018-12-01 15:03:18
         $now = Carbon::now();
 
+        // scheduled_date 2018-12-02
+        // scheduled_time 15:00:00       hActual -3m <= scheduled_time < hActual +3m
 
         $headers = ['id', 'schedule_date', 'schedule_time', 'patient_id'];
 

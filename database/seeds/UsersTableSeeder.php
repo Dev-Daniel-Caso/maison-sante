@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt('123'),
             'remember_token' => Str::random(10),
-            'dni' =>  '76165238',
+            'dni' =>  '76165239',
             'address' => 'Mi Casa',
             'phone' => '',
             'role' => 'doctor'
@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt('123'),
             'remember_token' => Str::random(10),
-            'dni' =>  '76165238',
+            'dni' =>  '76165240',
             'address' => 'Mi Casa',
             'phone' => '',
             'role' => 'patient'
