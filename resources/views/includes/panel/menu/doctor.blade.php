@@ -8,8 +8,13 @@
     <i class="ni ni-time-alarm text-primary"></i> Mis citas
   </a>
 </li>
-<!-- <li class="nav-item">
+<li class="nav-item">
   <a class="nav-link" href="/patients">
     <i class="ni ni-satisfied text-info"></i> Mis pacientes
   </a>
-</li> -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba
+  </a>
+</li>
