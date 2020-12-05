@@ -15,6 +15,16 @@
 </li>
 <li class="nav-item">
   <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba 2
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
+    <i class="ni ni-satisfied text-info"></i> Prueba
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/patients">
     <i class="ni ni-satisfied text-info"></i> Prueba
   </a>
 </li>
