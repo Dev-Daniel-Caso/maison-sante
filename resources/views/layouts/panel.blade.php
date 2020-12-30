@@ -28,8 +28,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-1" href="./index.html">
-        <img src="{{asset('img/Logos/maison-sante.png')}}" height="480" width="150" class="navbar-brand-img" alt="...">
+      <a  href="/">
+        <img src="{{asset('img/Logos/sante-3.jpg')}}" height="80" width="220"  alt="...">
       </a>
       <!-- User -->
       @include('includes.panel.sidebar')
@@ -39,7 +39,7 @@
         <div class="navbar-collapse-header d-md-none">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="./index.html">
+              <a href="/">
                 <img src="{{asset('img/logos/profile.png')}}">
               </a>
             </div>

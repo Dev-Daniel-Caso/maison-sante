@@ -34,8 +34,8 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="../index.html">
-                  <img src="{{ asset('img/Logos/maison-sante.png')}}">
+                <a href="/">
+                  <img src="{{ asset('img/Logos/sante-1.png')}}">
                 </a>
               </div>
               <div class="col-6 collapse-close">

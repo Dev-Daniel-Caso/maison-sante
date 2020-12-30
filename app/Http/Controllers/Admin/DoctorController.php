@@ -13,9 +13,9 @@ class DoctorController extends Controller
         $rules = [
             'name'       => 'required',
             'email'   => 'required|email',
-            'dni'        => 'digits:8',
-            'address'    => 'min:5',
-            'phone'      => 'min:6'
+            'dni'        => 'nullable|digits:8',
+            'address'    => 'nullable|min:5',
+            'phone'      => 'nullable|min:6'
         ];
 
         $message = [
@@ -23,7 +23,7 @@ class DoctorController extends Controller
             'email.required'           =>  'Es necesario ingresar el email',
             'dni.digits'               =>  'El DNI debe contener 8 digitos',
             'address.min'              =>  'La direccion debe contener mas de 5 caracteres',
-            'phone.min'                =>  'La direccion debe contener mas de 6 caracteres'
+            'phone.min'                =>  'El Telefono debe contener mas de 6 caracteres'
         ];
 
         $this->validate($request, $rules, $message);
@@ -47,15 +47,15 @@ class DoctorController extends Controller
     {
         $this->performValidation($request);
         #dd($request->all());
-       $user =  User::create(
-            $request->only('name', 'email', 'dni', 'address', 'phone') +
-            [
-                'role'      => 'doctor',
-                'password'  => bcrypt($request->password)
-            ]       
+        $user = User::create(
+            $request->only('name', 'email', 'dni', 'address', 'phone')
+            + [
+                'role' => 'doctor',
+                'password' => bcrypt($request->input('password'))
+            ]
         );
-        // atach crear relaciones
-        $user->specialty()->attach($request->specialties);
+
+        $user->specialties()->attach($request->input('specialties'));
         $notificacion = 'El doctor fue registrado correctamente';
         return redirect('/doctors')->with(compact('notificacion'));
     }
