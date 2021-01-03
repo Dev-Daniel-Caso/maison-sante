@@ -36,7 +36,7 @@ class PatientController extends Controller
 
     public function create()
     {
-        return view('doctors.create');
+        return view('patients.create');
     }
 
 
