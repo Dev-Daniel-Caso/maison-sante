@@ -11,9 +11,9 @@ class PatientController extends Controller
         $rules = [
             'name'       => 'required',
             'email'   => 'required|email',
-            'dni'        => 'digits:8',
-            'address'    => 'min:5',
-            'phone'      => 'min:6'
+            'dni'        => 'nullable|digits:8',
+            'address'    => 'nullable|min:5',
+            'phone'      => 'nullable|min:6'
         ];
 
         $message = [
